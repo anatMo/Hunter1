@@ -1,21 +1,34 @@
 package com.example.hunter1;
 
-import android.view.View;
-import android.widget.RelativeLayout;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hunter1.objects.Player;
+import com.example.hunter1.objects.Square;
 
 import java.util.ArrayList;
 
 public class GameManager {
 
     private ArrayList<Square> squares;
+    private ArrayList<Player> scores;
     private int currentHunterIndex = 5;
     private int currentBearIndex = 9;
     private int score= 0;
     private int lives = 3;
 
-    public GameManager(Activity_Main activity_main) {
+    public GameManager(AppCompatActivity activity_main) {
 
-        squares = GameDataManager.buildData(activity_main);
+        squares = GameDataManager.buildDataSquaresArray(activity_main);
+
+    }
+
+
+
+    public void updateSortedScoresToScoreObjectsArray(ArrayList<Integer> scoresList){
+
+        for (int i = 0; i < scoresList.size(); i++) {
+            scores.get(i).setScore(scoresList.get(i));
+        }
     }
 
     public int getLives() {
@@ -32,4 +45,10 @@ public class GameManager {
     public ArrayList<Square> getSquares() {
         return squares;
     }
+
+    public ArrayList<Player> getScores() {
+        return scores;
+    }
+
+
 }
