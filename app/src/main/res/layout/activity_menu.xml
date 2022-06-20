@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Activity_Main_Sensors">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_sleep" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/menu_TXT_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="      Hunter"
+            android:textColor="#9AFFC107"
+            android:textSize="80sp"
+            android:textStyle="bold"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="350dp"
+            android:layout_height="450dp"
+            android:layout_below="@+id/menu_TXT_title"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="35dp"
+            android:background="#7A9ADC9F"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_BTN_startGame"
+                android:layout_width="250dp"
+                android:layout_height="125dp"
+                android:layout_margin="50dp"
+                android:backgroundTint="#8580500A"
+                android:text="Start Game"
+                android:textColor="#A8DCD7D1"
+                android:textSize="40dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_BTN_topTen"
+                android:layout_width="250dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="50dp"
+                android:backgroundTint="#8580500A"
+                android:text="Top\nTen"
+                android:textColor="#A8DCD7D1"
+                android:textSize="40dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
